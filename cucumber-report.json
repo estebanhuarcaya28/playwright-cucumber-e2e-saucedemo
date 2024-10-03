@@ -1,0 +1,89 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "purchase-items-on-saucedemo;purchase-an-item",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Purchase an item",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the SauceDemo login page",
+            "match": {
+              "location": "tests\\steps\\loginSteps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4628477399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "tests\\steps\\loginSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 235794600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I select a random item to purchase",
+            "match": {
+              "location": "tests\\steps\\loginSteps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101607399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I proceed to checkout",
+            "match": {
+              "location": "tests\\steps\\loginSteps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258634100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see the confirmation message",
+            "match": {
+              "location": "tests\\steps\\loginSteps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 679008899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "purchase-items-on-saucedemo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Purchase items on SauceDemo",
+    "tags": [],
+    "uri": "tests\\features\\login.feature"
+  }
+]
