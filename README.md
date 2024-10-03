@@ -58,11 +58,11 @@ Se ha utilizado la **Técnica de Partición de Equivalencia** para identificar d
    ```bash
    git clone <tu-repositorio-url>
 
-2. Navega al directorio del proyecto
+2. Navega al directorio del proyecto:
     cd playwright-course-jm-consultant4
 
-3. Instala las dependencias:
+4. Instala las dependencias:
     npm install
 
-4. Ejecuta las pruebas:
+5. Ejecuta las pruebas:
     npx cucumber-js test
