@@ -1,68 +1,49 @@
-# Proyecto de Automatización con Playwright
+# Desafío de Automatización - QA Esteban Huarcaya
 
-Este proyecto tiene como objetivo automatizar la funcionalidad de compra de un producto en la aplicación SauceDemo utilizando Playwright y Cucumber.
+Este proyecto consiste en la automatización de pruebas de la aplicación SauceDemo utilizando Playwright y Cucumber. El objetivo es validar el proceso de compra de un producto en la plataforma.
 
 ## Objetivos del Reto
 
-### 1. Casos de Prueba:
+### Casos de Prueba:
 
-#### Caso de Prueba 1: Iniciar sesión con credenciales válidas
-- **Descripción**: Verificar que un usuario pueda iniciar sesión con credenciales válidas.
-- **Pasos**:
-  1. Navegar a la página de inicio de sesión de SauceDemo.
-  2. Ingresar el nombre de usuario `standard_user`.
-  3. Ingresar la contraseña `secret_sauce`.
-  4. Hacer clic en el botón "Login".
-- **Resultado Esperado**: El usuario debe ser redirigido a la página de productos.
+1. **Caso de Prueba 1: Login con credenciales válidas**
+   - **Descripción**: Verificar que el usuario puede iniciar sesión con credenciales válidas.
+   - **Entradas**: Usuario: `standard_user`, Contraseña: `secret_sauce`.
+   - **Resultados Esperados**: El usuario debe ser redirigido a la página de productos.
 
-#### Caso de Prueba 2: Seleccionar un producto y añadirlo al carrito
-- **Descripción**: Verificar que un usuario pueda añadir un producto al carrito.
-- **Pasos**:
-  1. Iniciar sesión como en el caso de prueba 1.
-  2. Seleccionar un producto aleatorio.
-  3. Hacer clic en el botón "Add to cart".
-- **Resultado Esperado**: El producto debe ser añadido al carrito.
+2. **Caso de Prueba 2: Selección de un producto**
+   - **Descripción**: Verificar que el usuario puede seleccionar un producto para comprar.
+   - **Entradas**: Producto disponible en la página.
+   - **Resultados Esperados**: El producto seleccionado debe añadirse al carrito.
 
-#### Caso de Prueba 3: Proceder al checkout
-- **Descripción**: Verificar que un usuario pueda proceder al checkout después de añadir un producto al carrito.
-- **Pasos**:
-  1. Iniciar sesión como en el caso de prueba 1.
-  2. Añadir un producto al carrito como en el caso de prueba 2.
-  3. Ir al carrito.
-  4. Hacer clic en el botón "Checkout".
-- **Resultado Esperado**: El usuario debe ser llevado a la página de información de checkout.
+3. **Caso de Prueba 3: Proceso de checkout**
+   - **Descripción**: Verificar que el usuario puede completar el proceso de compra.
+   - **Entradas**: Información de checkout (Nombre: `Esteban`, Apellido: `Huarcaya Curo`, Código postal: `5001`).
+   - **Resultados Esperados**: El usuario debe ver un mensaje de confirmación de compra.
 
-#### Caso de Prueba 4: Completar la información de checkout
-- **Descripción**: Verificar que un usuario pueda completar la información de checkout.
-- **Pasos**:
-  1. Proceder al checkout como en el caso de prueba 3.
-  2. Rellenar los campos: First Name, Last Name y Zip/Postal Code.
-  3. Hacer clic en el botón "Continue".
-- **Resultado Esperado**: El usuario debe ser llevado a la página de resumen del checkout.
+### Técnica de Diseño de Caso de Prueba:
+- **Partición de Equivalencia**: Se ha utilizado esta técnica para dividir las entradas posibles (credenciales, selección de productos) en grupos equivalentes que producen el mismo resultado. Por ejemplo, se han probado credenciales válidas y no válidas, así como la selección de productos de diferentes categorías.
 
-#### Caso de Prueba 5: Confirmar la compra
-- **Descripción**: Verificar que un usuario pueda confirmar la compra.
-- **Pasos**:
-  1. Completar la información de checkout como en el caso de prueba 4.
-  2. Hacer clic en el botón "Finish".
-- **Resultado Esperado**: Se debe mostrar un mensaje de confirmación de la compra.
+## Tecnologías Utilizadas
+- [Playwright](https://playwright.dev/) para la automatización de pruebas.
+- [Cucumber](https://cucumber.io/) para la redacción de pruebas en lenguaje Gherkin.
 
-### 2. Técnica de Diseño de Caso de Prueba
-Se ha utilizado la **Técnica de Partición de Equivalencia** para identificar diferentes entradas y acciones en el flujo de compra, dividiendo los casos en clases equivalentes. Por ejemplo:
-- **Entradas válidas**: Credenciales correctas, información de checkout válida.
-- **Entradas inválidas**: Credenciales incorrectas, campos de checkout vacíos.
-
-## Instrucciones para Ejecutar el Proyecto
-
+## Cómo Ejecutar el Proyecto
 1. Clona el repositorio:
    ```bash
-   git clone <tu-repositorio-url>
+   git clone https://github.com/estebanhuarcaya28/playwright-cucumber-e2e-saucedemo.git
 
-2. Navega al directorio del proyecto:
-    cd playwright-course-jm-consultant4
+2. Navega a la carpeta del proyecto:
+   cd desafio-automatización-qa-esteban-huarcaya
 
-4. Instala las dependencias:
-    npm install
+3. Instala las dependencias:
+   npm init playwright@latest
+   npm i @cucumber/cucumber
+   
+4. Ejecuta las pruebas:
+   npx cucumber-js test
 
-5. Ejecuta las pruebas:
-    npx cucumber-js test
+Contacto
+Nombre: Esteban Huarcaya Curo
+Correo electrónico: estebanhuarcayacuro@gmail.com
+LinkedIn: https://www.linkedin.com/in/estebanhuarcayacuro/
